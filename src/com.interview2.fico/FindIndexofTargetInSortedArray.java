@@ -18,24 +18,25 @@ public class FindIndexofTargetInSortedArray {
 		int index = findTarget(input, target) ;
 	  System.out.println(" --Target element can be arranged in this index ::: "+index );
 	}
+	
 	private static int findTarget(int[] input,int target) {
 		int start=0 ; 
 		int end = input.length-1; 
 	
 		while(start <= end ) {
-			 
-			int mid = (start+end)/2;
-			
-			if(input[mid] < target) {
-				start = mid+1;
-				return start ; 
-			}else if (input[mid] < target) {
-				end = mid-1 ;
-			}else {
-				return mid ; 
-			}
-    }
-	return -1;
+
+				int mid = (start+end)/2;
+
+				if(input[mid] < target) {
+					start = mid+1;
+					return start ; 
+				}else if (input[mid] < target) {
+					end = mid-1 ;
+				}else {
+					return mid ; 
+				}
+                 }
+	  return -1;
 	}
 
 }
